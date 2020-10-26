@@ -1,4 +1,27 @@
-body{
-    background-color: $dark;
-    color: $white;
+$danger: #ff0000;
+$success: #00ff00;
+$black: #000;
+
+body {
+    color: white;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+.danger {
+    color: $danger;
+}
+
+.success{
+    color: $success;
+}
+
+.kara{
+    color:black;
 }

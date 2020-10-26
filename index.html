@@ -1,20 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="css/main.css"/>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css" />
 
 </head>
-<body>
-    
 
-    
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">Admin</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categories.html" class="nav-link disabled">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link disabled">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="orders.html" class="nav-link disabled">Orders</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown mr-2">
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-user mr-2"></i>Welcome Guest
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user-circle mr-2"></i> Profile
+                            </a>
+                            <a href="settings.html" class="dropdown-item">
+                                <i class="fas fa-cog mr-2"></i> Settings
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Logout</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="bg-secondary text-white p-2">
+        <div class="container">
+            <h1 class="h5"><i class="fas fa-caret-right mr-3"></i>Dashboard</h1>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-3"> 
+                <div class="card text-center bg-primary text-white mb-3">
+                    <div class="card-body">
+                        <h3>Users</h3>
+                        <h4 class="display-3"><i class="fas fa-user mr-2"></i> 124</h4>
+                        <a href="" class="btn btn-outline-light btn-sm disabled">Manage</a>
+                    </div>
+                </div>
+                <div class="card text-center bg-success text-white mb-3">
+                    <div class="card-body">
+                        <h3>Products</h3>
+                        <h4 class="display-3"><i class="fas fa-folder-open mr-2"></i> 226</h4>
+                        <a href="products.html" class="btn btn-outline-light btn-sm">Manage</a>
+                    </div>
+                </div>
+                <div class="card text-center bg-info text-white mb-3">
+                    <div class="card-body">
+                        <h3>Categories</h3>
+                        <h4 class="display-3"><i class="fas fa-folder-open mr-2"></i> 164</h4>
+                        <a href="" class="btn btn-outline-light btn-sm disabled">Manage</a>
+                    </div>
+                </div>
+                <div class="card text-center bg-warning text-white mb-3">
+                    <div class="card-body">
+                        <h3>Orders</h3>
+                        <h4 class="display-3"><i class="fas fa-shopping-basket mr-2"></i> 164</h4>
+                        <a href="" class="btn btn-outline-light btn-sm disabled">Manage</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingOne">
+                            <button class="btn btn-link btn-block text-left text-decoration-none link-dark"
+                                data-toggle="collapse" data-target="#collapseOne">
+                                <h4>Last Orders</h4>
+                            </button>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">User Name</th>
+                                        <th scope="col">Price</td>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1000</td>
+                                        <td>username-1</td>
+                                        <td>1003 TL</td>
+                                        <td>12/2/2020 12.21</td>
+                                        <td>
+                                            <span class="badge bg-primary">Waiting approval</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1001</td>
+                                        <td>username-1</td>
+                                        <td>1003 TL</td>
+                                        <td>12/2/2020 12.21</td>
+                                        <td>
+                                            <span class="badge bg-warning">Getting ready</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1040</td>
+                                        <td>username-3</td>
+                                        <td>1003 TL</td>
+                                        <td>12/2/2020 12.21</td>
+                                        <td>
+                                            <span class="badge bg-success">Shipped</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1240</td>
+                                        <td>username-5</td>
+                                        <td>1003 TL</td>
+                                        <td>12/2/2020 12.21</td>
+                                        <td>
+                                            <span class="badge bg-primary">Waiting approval</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1245</td>
+                                        <td>username-2</td>
+                                        <td>1003 TL</td>
+                                        <td>12/2/2020 12.21</td>
+                                        <td>
+                                            <span class="badge bg-primary">Waiting approval</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header" id="headingTwo">
+                            <button class="btn btn-link btn-block text-left text-decoration-none link-dark"
+                                data-toggle="collapse" data-target="#collapseTwo">
+                                <h4>Last Added Products</h4>
+                            </button>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>State</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <img src="img/1.jpg" class="img-fluid" width="50" alt="">
+                                        </td>
+                                        <td>Samsung S7</td>
+                                        <td>1400 TL</td>
+                                        <td>
+                                            <i class="fas fa-check success"></i>
+                                        </td>
+                                        <td class="text-right">
+                                            <a href="details.html" class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <img src="img/2.jpg" class="img-fluid" width="50" alt="">
+                                        </td>
+                                        <td>Apple 12</td>
+                                        <td>14000 TL</td>
+                                        <td>
+                                            <i class="fas fa-times danger"></i>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <img src="img/3.jpg" class="img-fluid" width="50" alt="">
+                                        </td>
+                                        <td>Samsung S7</td>
+                                        <td>1400 TL</td>
+                                        <td>
+                                            <i class="fas fa-check success"></i>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <img src="img/4.jpg" class="img-fluid" width="50" alt="">
+                                        </td>
+                                        <td>Xaomi Redmi 7</td>
+                                        <td>1400 TL</td>
+                                        <td>
+                                            <i class="fas fa-check success"></i>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <img src="img/5.jpg" class="img-fluid" width="50" alt="">
+                                        </td>
+                                        <td>Huawei P20 Lite</td>
+                                        <td>1200 TL</td>
+                                        <td>
+                                            <i class="fas fa-times danger"></i>
+                                        </td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-caret-right mr-2"></i>Details</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+
+
+
+
+            </div>
+        </div>
+    </div>
+
 
     <script src="/node_modules/popper.js/dist/popper.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
